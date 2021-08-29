@@ -16,6 +16,8 @@ namespace verikai
 
         public static void ProcessRawPerson(Dictionary<string, string> rawPerson, Dictionary<string, Dictionary<string, string>> lookupData)
         {
+            // Note: Invalid data is logged to the console and the data is removed from the processed person.
+
             string key = "gender";
             string gender;
             if (rawPerson.TryGetValue(key, out gender))
